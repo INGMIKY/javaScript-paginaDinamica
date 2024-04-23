@@ -8,14 +8,30 @@ function sonidos(idSonidoElemento){
     document.querySelector(idSonidoElemento).play();
 }
 
+
 // iniciamos un contador que funcionará como indice para cada tecla
-let contador = 0;
+// let contador = 0;
 
 
 // creamos un bucle while para que recorrá en todas las teclas y así no repetir código 
-while( contador < listaDeTeclas.length){
-    const listaSonidos = listaDeTeclas[contador].classList[1];
-    const teclas = listaDeTeclas[contador];
+// while( contador < listaDeTeclas.length){
+//     const listaSonidos = listaDeTeclas[contador].classList[1];
+//     const teclas = listaDeTeclas[contador];
+//     const idAudio = `#sonido_${listaSonidos}`;
+
+
+//     teclas.onclick = function(){
+//         sonidos(idAudio);
+//     };
+    
+//     contador ++;
+//     console.log(listaSonidos);
+//     console.log(contador);
+// }
+
+for (i = 0; i < listaDeTeclas.length; i++){
+    const listaSonidos = listaDeTeclas[i].classList[1];
+    const teclas = listaDeTeclas[i];
     const idAudio = `#sonido_${listaSonidos}`;
 
 
@@ -23,7 +39,6 @@ while( contador < listaDeTeclas.length){
         sonidos(idAudio);
     };
     
-    contador ++;
     console.log(listaSonidos);
-    console.log(contador);
+    console.log(i);
 }
